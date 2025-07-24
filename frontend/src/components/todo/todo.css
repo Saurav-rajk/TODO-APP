@@ -1,0 +1,77 @@
+.main {
+  background: #f3f4f6;
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.todo-wrapper {
+  width: 100%;
+  max-width: 600px;
+}
+
+.todo-container {
+  background: #ffffff;
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.todo-inputs-box {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.todo-input,
+.todo-textarea {
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1.5px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  outline: none;
+}
+
+.todo-input:focus,
+.todo-textarea:focus {
+  border-color: #1976d2;
+}
+
+.todo-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.todo-button {
+  background-color: #1976d2;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.todo-button:hover {
+  background-color: #0d47a1;
+}
+
+.todo-cards-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

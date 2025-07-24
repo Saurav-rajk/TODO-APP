@@ -1,0 +1,42 @@
+:root {
+  --theme-light: #f28b82; /* soft red */
+  --theme-main: rgba(240, 0, 0, 0.7); /* slightly lighter */
+  --theme-bg-gradient: linear-gradient(90deg, #f28b82, #fbc2c2); 
+  --text-light: #fff;
+  --text-muted: rgba(255, 255, 255, 0.8);
+}
+
+.footer {
+  background: var(--theme-bg-gradient);
+  color: var(--text-light);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem 0;
+  font-weight: 500;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.footer:hover {
+  background: linear-gradient(90deg, #fbc2c2, #f28b82);
+}
+
+.footer h4 {
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.footer-divider {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 10px;
+}
