@@ -7,10 +7,8 @@ const list = require("./routes/list");
 const path = require("path");
 app.use(express.json());
 app.use(cors());
-app.get("/",(req,res)=>{
-   // res.send("Hello");
-   app.use(express.static(path.resolve(__dirname,"frontend","dist")));
-   res.sendFile(path.resolve(__dirname,"frontend", "dist","index.html"));
+app.get("/", (req, res) => {
+  res.send("Backend is running!");
 });
 
 
