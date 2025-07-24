@@ -10,4 +10,3 @@ const conn = async () => {
 };
 
 module.exports = conn;
-
