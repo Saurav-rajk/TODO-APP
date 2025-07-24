@@ -1,20 +1,27 @@
 const express = require("express");
+require("dotenv").config(); // ✅ Load .env
 const app = express();
-require("./conn/conn");
-const serverless = require("serverless-http");
 const cors = require("cors");
+const conn = require("./conn/conn"); // ✅ DB connection
 const auth = require("./routes/auth");
 const list = require("./routes/list");
-const path = require("path");
+
+// Middleware
 app.use(express.json());
 app.use(cors());
 
-app.get("/ping", (req, res) => {
+// Routes
+app.get("/", (req, res) => {
   res.send("Backend is running!");
 });
 
+app.use("/api/v1", auth);
+app.use("/api/v2", list);
 
-app.use("/api/v1",auth);
-app.use("/api/v2",list);
+// Connect to DB and start server
+conn();
 
-module.exports.handler = serverless(app);
+const PORT = process.env.PORT || 1000;
+app.listen(PORT, () => {
+  console.log(`Server started on port ${PORT}`);
+});
