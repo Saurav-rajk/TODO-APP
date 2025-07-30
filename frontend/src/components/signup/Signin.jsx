@@ -22,7 +22,7 @@ const Signin = () => {
  const submit = async (e) => {
   e.preventDefault();
   try {
-    const response = await axios.post(`http://localhost:1000/api/v1/signin`, inputs);
+    const response = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/v1/signin`, inputs);
     console.log("Full Response:", response);            // log entire response
     console.log("Response Data:", response.data);       // log data only
 

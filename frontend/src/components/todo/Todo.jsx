@@ -19,7 +19,7 @@ const Todo = () => {
   const fetchTasks = async () => {
     if (!id) return;
     try {
-      const response = await axios.get(`http://localhost:1000/api/v2/getTasks/${id}`);
+      const response = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/api/v2/getTasks/${id}`);
       setTodos(response.data.list);
     } catch (error) {
       console.error("Error fetching tasks:", error);
@@ -45,7 +45,7 @@ const Todo = () => {
   if (editingId) {
     // Update Task
     try {
-      const response = await axios.put(`http://localhost:1000/api/v2/updateTask/${editingId}`, {
+      const response = await axios.put(`${import.meta.env.VITE_API_BASE_URL}/api/v2/updateTask/${editingId}`, {
         title: inputs.title,
         body: inputs.body,
       });
@@ -65,7 +65,7 @@ const Todo = () => {
     // Add Task
     if (id) {
       try {
-        const response = await axios.post(`http://localhost:1000/api/v2/addTask`, {
+        const response = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/api/v2/addTask`, {
           title: inputs.title,
           body: inputs.body,
           id: id,
@@ -96,7 +96,7 @@ const Todo = () => {
 
  const handleDelete = async (taskId) => {
   try {
-    await axios.delete(`http://localhost:1000/api/v2/deleteTask/${taskId}`);
+    await axios.delete(`${import.meta.env.VITE_API_BASE_URL}/api/v2/deleteTask/${taskId}`);
     const updatedTodos = todos.filter((todo) => todo._id !== taskId);
     setTodos(updatedTodos);
     toast.warn('Task deleted!');
