@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react'
 
 import './App.css'
 import Navbar from './components/navbar/Navbar'
-import Home from './components/home/home'
-import Footer from './components/footer/footer'
+import Home from './components/home/Home'
+import Footer from './components/footer/Footer'
 import About from './components/about/About'
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Signup from './components/signup/Signup'
