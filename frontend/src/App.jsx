@@ -8,7 +8,7 @@ import About from './components/about/About'
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Signup from './components/signup/Signup'
 import Signin from './components/signup/Signin'
-import Todo from './components/Todo/Todo'
+import Todo from './components/todo/Todo'
 import {useDispatch} from "react-redux";
 import { authActions } from './store'
 
