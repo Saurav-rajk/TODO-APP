@@ -1,7 +1,7 @@
 import React from 'react';
 import { AiFillDelete } from "react-icons/ai";
 import { GrDocumentUpdate } from "react-icons/gr";
-import './TodoCards.css';
+import './todoCards.css';
 
 const TodoCards = ({ title, description, onDelete, onUpdate }) => {
     return (
